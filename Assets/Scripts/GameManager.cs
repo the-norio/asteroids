@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        // TODO
+        this.lives = 3;
+        this.score = 0;
+        Invoke(nameof(RespawnPlayer), this.respawnTime);
     }
 }
